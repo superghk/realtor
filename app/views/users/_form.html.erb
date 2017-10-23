@@ -1,0 +1,24 @@
+<%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.label :role, "User Type" , class: "control-label"%>
+      <%= f.radio_button :role, "Buyer", :checked => true %>
+      <%= f.label :role, "Buyer" , :value => "buyer", class: 'radio-inline'%>
+      <%= f.radio_button :role, "Seller" %>
+      <%= f.label :role, "Seller" , :value => "seller",class: 'radio-inline'%>
+      <div class="button_div">    
+            <%= f.submit "Submit", class: "btn btn-primary" %>
+      </div>
+<% end %>

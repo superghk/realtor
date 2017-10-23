@@ -12,7 +12,19 @@ module SessionsHelper
 		!current_user.nil?
 	end
 
+	def current_user_house
+		@current_user_house ||= House.find_by(id: session[:user_id])
+	end
+
+	def has_house?
+		!current_user_house.nil?
+	end
 	
+
+	def is_current_user_seller?
+		@current_user.role == "Seller"
+	end
+
 	def log_out
 		session.delete(:user_id)
 		@current_user = nil

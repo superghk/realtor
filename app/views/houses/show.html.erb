@@ -1,0 +1,23 @@
+<%= provide(:title, "My Listing") %>
+<h1>House Listings</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  	<% if @user.id == @house.user_id %>
+  		<% @user.name %>
+  		<% @user.email %>
+
+  		<% @house.house_type %>
+  		<% @house.bathroom %>
+  		<% @house.room %>
+  		<% @house.price %>
+  		<% @house.description %>
+
+  		
+  		<%= link_to "Edit", edit_house_path(current_user_house), class: "btn btn-lg btn-primary" %>
+  	<% else %>
+  		<h1>My Listing</h1>
+		<h2>You don't have any houses to show</h2>
+		<%= link_to "Add it now!", addlisting_path, class: "btn btn-lg btn-primary" %>
+  	<% end %>
+  </div>
+</div>

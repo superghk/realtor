@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  house_type: 
+  bathroom: 1
+  room: 1
+  price: 1
+  description: MyText
+
+two:
+  house_type: 
+  bathroom: 1
+  room: 1
+  price: 1
+  description: MyText
+
+house1:
+  house_type: "Detached"
+  bathroom: 3
+  room: 3
+  price: 3
+  description: "House is very clean!"

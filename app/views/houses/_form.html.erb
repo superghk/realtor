@@ -1,0 +1,19 @@
+<%= form_for(@house, url: addlistings_path) do |f| %>
+  	<%= render 'shared/house_error_messages' %>
+	<%= f.label :house_type %>
+	<%= f.select :house_type, ['', 'Detached', 'Semi-detached', 'Town'], class: 'form-control' %>
+
+	<%= f.label :bathroom %>
+	<%= f.select :bathroom, ['', 0, 1, 2, 3, 'More'], class: 'form-control' %>
+
+	<%= f.label :room %>
+	<%= f.select :room, ['', 0, 1, 2, 3, 'More'], class: 'form-control' %>
+
+	<%= f.label :price, "Price" %>
+	<%= f.text_area :price %>
+
+	<%= f.label :description, "Description" %>
+	<%= f.text_area :description %>
+
+	<%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>

@@ -10,4 +10,8 @@ class ActiveSupport::TestCase
   def is_logged_in?
   	!session[:user_id].nil?
   end
+
+  def does_have_houses?
+  	!house[:user_id].nil?
+  end
 end
