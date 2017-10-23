@@ -1,0 +1,38 @@
+<%= provide(:title, "Home") %>
+<div class="center jumbotron">
+	<h1>Welcome to Elena's Realtors App</h1>
+	<h2>Are you looking to sell a house or buy a house?</h2>
+	<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+<div class ="home_search">
+	<%= form_for(:house, url: listing_path) do |f| %>
+	<div class ="row">
+
+		<%= f.search_field :address, class: "form-control", placeholder: "Search" %>
+		<div class="col-sm-3">
+	  	<%= f.label :type %>
+	  	<%= f.select :type, ['Any', 'Detached', 'Semi-detached', 'Town'] %>
+		</div>
+		<div class="col-sm-3">
+	  	<%= f.label :bathroom %>
+	  	<%= f.select :bathroom, ['Any', 0, 1, 2, 3, 'More'], class: 'form-control' %>
+		</div>
+		<div class="col-sm-3">
+	 	<%= f.label :room %>
+	 	
+	  	<%= f.select :room, ['Any', 0, 1, 2, 3, 'More'], class: 'form-control' %>
+		</div>
+		<div class="col-sm-3">
+	  	<%= f.label :price, "Price" %>
+	  	
+	  	<%= f.select :price, ['Any', '0~100,000', '100,000~200,000','More'], class: 'form-control' %>
+		</div>
+	</div>
+	 <div class="button_div">
+	  <%= f.submit "Search", class: "btn btn-primary" %>
+	  </div>
+	<% end %>
+</div>
+
+
+
