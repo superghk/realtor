@@ -1,5 +1,6 @@
-<% provide(:title, 'All Houses') %>
-<h1>All houses</h1>
+
+<% provide(:title, 'User Houses') %>
+<h1>All houses of <%= current_user.name %></h1>
 
 <ul class="houses">
   <% @houses.each do |house| %>
