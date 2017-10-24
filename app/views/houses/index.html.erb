@@ -1,0 +1,11 @@
+<% provide(:title, 'All Houses') %>
+<h1>All houses of <%= current_user.name %></h1>
+
+<ul class="houses">
+  <% @houses.each do |house| %>
+    <li>
+      House id:
+      <%= link_to house.id, house %>
+    </li>
+  <% end %>
+</ul>

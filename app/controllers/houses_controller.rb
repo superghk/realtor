@@ -1,9 +1,9 @@
 class HousesController < ApplicationController
 
   before_action :user_is_logged_in, only: [:create, :edit, :update]
-  # def index
-  #   @houses = current_user.houses
-  # end
+  def index
+    @houses = current_user.houses
+  end
 
   def show
     @house = House.find_by(id: params[:id])

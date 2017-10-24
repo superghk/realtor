@@ -14,7 +14,8 @@
 	              <li><%= link_to "Profile", current_user %></li>
 	              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
 	              	<% if has_house? && is_current_user_seller? %>
-	              		<li><%= link_to "My Listing", house_path(current_user.houses.first) %></li>
+	              		<li><%= link_to "My Listing",  houses_path%></li>
+	              		<li><%= link_to "Add Listing", addlistings_path %></li>
 	                <% elsif is_current_user_seller? %>
 	              		<li><%= link_to "Add Listing", addlistings_path %></li>
 	              	<% end %>
@@ -32,3 +33,4 @@
 		</nav>
 	</div>
 </header>
+<!-- house_path(current_user.houses.first) -->
