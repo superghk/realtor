@@ -134,7 +134,7 @@ aside {
 
 /* forms */
 
-input, textarea, select, .uneditable-input {
+input,  textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   
   margin-bottom: 15px;
@@ -167,4 +167,14 @@ input {
 .home_search {
 	/*border: 1px solid #bbb;*/
 	padding: 100px 100px;
+}
+
+.ticket_info_container{
+  	border: 1px solid #bbb;
+  	width: 100%;
+  	text-align: center;
+  	margin: 0 auto;
+  	
+    background-color: #eee;
+    display: inline-block;
 }

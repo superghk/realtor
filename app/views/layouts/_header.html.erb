@@ -13,11 +13,12 @@
             		<ul class="dropdown-menu">
 	              <li><%= link_to "Profile", current_user %></li>
 	              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-	              <% if is_current_user_seller? && has_house? %>
-	              	<li><%= link_to "My Listing", mylisting_path %></li>
-	              <% elsif is_current_user_seller? %>
-	              	<li><%= link_to "Add Listing", addlistings_path %></li>
-	              <% end %>
+	              	<% if has_house? && is_current_user_seller? %>
+	              		<li><%= link_to "My Listing", house_path(current_user.houses.first) %></li>
+	                <% elsif is_current_user_seller? %>
+	              		<li><%= link_to "Add Listing", addlistings_path %></li>
+	              	<% end %>
+	             
 	              <li class="divider"></li>
 	              <li>
 	                <%= link_to "Log out", logout_path, method: :delete %>

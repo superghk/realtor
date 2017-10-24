@@ -8,7 +8,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                          email: "user@invalid",
                                          password:              "foo",
                                          password_confirmation: "bar",
-                                         role: "buyer" } }
+                                         role: "" } }
     end
     assert_template 'users/new'
     assert_select "a[href=?]", signup_path

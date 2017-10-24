@@ -4,7 +4,7 @@ class HousesAddTest < ActionDispatch::IntegrationTest
   test "invalid adding information" do
     get addlistings_path
     assert_no_difference 'House.count' do
-      post users_path, params: { user: { house_type:  "",
+      post houses_path, params: { user: { house_type:  "",
                                          bathroom: "",
                                          room:  "",
                                          price: ""} }

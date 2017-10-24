@@ -15,8 +15,8 @@ class HouseTest < ActiveSupport::TestCase
   	assert_not @house.valid?
   end
 
-  test "bathroom should be present or 0" do
-  	@house.bathroom = "" || @house.bathroom = 0
+  test "bathroom should be present" do
+  	@house.bathroom = "" 
   	assert_not @house.valid?
   end
 
@@ -25,8 +25,8 @@ class HouseTest < ActiveSupport::TestCase
   	assert_not @house.valid?
   end
 
-  test "room should be present or 0" do
-  	@house.room = "" || @house.room = 0
+  test "room should be present" do
+  	@house.room = "" 
   	assert_not @house.valid?
   end
 
@@ -35,8 +35,8 @@ class HouseTest < ActiveSupport::TestCase
   	assert_not @house.valid?
   end
 
-  test "price should be present or 0" do
-  	@house.price = "" || @house.price = 0
+  test "price should be present" do
+  	@house.price = "" 
   	assert_not @house.valid?
 
   end

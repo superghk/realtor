@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   get '/login', to:'sessions#new'
   get '/login',	 to: 'sessions#create'
-  get '/mylisting', to: 'houses#show'
+  
   get '/addlistings',	to: 'houses#new'
+
   
   delete '/logout',  to: 'sessions#destroy'
   
