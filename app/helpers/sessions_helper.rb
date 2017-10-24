@@ -24,6 +24,8 @@ module SessionsHelper
 		current_user.houses.any?
 	end
 	
+	
+
 	def user_is_logged_in
     	unless logged_in?
     		flash[:danger] = "Please log in."

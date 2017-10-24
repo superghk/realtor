@@ -2,7 +2,7 @@ class HousesController < ApplicationController
 
   before_action :user_is_logged_in, only: [:create, :edit, :update]
   def index
-    @houses = House.all
+    @houses = House.includes(:user).all
   end
 
   
