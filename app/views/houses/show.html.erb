@@ -1,7 +1,9 @@
 <%= provide(:title, "House Info") %>
 <h1>House Info</h1>
 <div class="container">
+
 		<div class="ticket_info_container">
+			<%= image_tag @house.image.url(:medium)%>
 			<h2>House Id: <%= @house.id %></h2>
 			<h2>Owner Name: <%= @house.user.name %> </h2>
 			<h2>Owner Email: <%= @house.user.email %> </h2>

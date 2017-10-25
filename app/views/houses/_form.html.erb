@@ -1,7 +1,6 @@
-<%= form_for(@house) do |f| %>
+<%= form_for(@house, html: { multipart: true }) do |f| %>
   	<%= render 'shared/house_error_messages' %>
 
-  	
 	<%= f.label :house_type %>
 	<%= f.select :house_type, ['', 'Detached', 'Semi-detached', 'Town'], {}, class: 'form-control' %>
 	
@@ -18,6 +17,8 @@
 
 	<%= f.label :description, "Description" %>
 	<%= f.text_area :description , class: 'form-control', placeholder: "Leave a description.. " %>
+
+	<%= f.file_field :image %>
 	<div class="button_div">
 	<%= f.submit "Submit", class: "btn btn-primary" %>
 	</div>

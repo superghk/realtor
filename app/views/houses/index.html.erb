@@ -1,15 +1,20 @@
 <% provide(:title, 'All Houses') %>
 <h1>All houses</h1>
+<div class="container">
+	<% @houses.each do |house| %>
+		<div class="row" style="border: 1px solid black;">
+			<div class="col-md-6" >
+  				House id:
+  				<%= link_to house.id, house %>
 
-<ul class="houses">
-  <% @houses.each do |house| %>
-    <li>
-      House id:
-      <%= link_to house.id, house %>
-	<h2>Price : $<%= house.price %></h2>
-	<h2>House Type : <%= house.house_type %></h2>
-	<h2>Bathrooms : <%= house.bathroom %></h2>
-	<h2>Bedrooms : <%= house.room %></h2>
-    </li>
-  <% end %>
-</ul>
+  				<%= image_tag house.image.url(:medium)%>
+			</div>
+			<div class="col-md-4">
+				<h2>Price : $<%= house.price %></h2>
+				<h2>House Type : <%= house.house_type %></h2>
+				<h2>Bathrooms : <%= house.bathroom %></h2>
+				<h2>Bedrooms : <%= house.room %></h2>
+			</div>
+		</div>
+	<% end %>
+</div>
