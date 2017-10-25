@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   post '/addlistings', to: 'houses#create'
   resources :users
   resources :houses
+  resources :notifications
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

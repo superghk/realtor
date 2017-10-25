@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
 	has_many :houses
+	has_many :notifications
 
 	before_save { email.downcase! }
 	#name validation
